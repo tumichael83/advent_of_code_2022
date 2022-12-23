@@ -16,7 +16,7 @@ if __name__ == '__main__':
             print(stack)
 
         for i in instructions:
-            boxes[i[2]-1].extend(boxes[i[1]-1][-1*i[0]:][::-1])
+            boxes[i[2]-1].extend(boxes[i[1]-1][-1*i[0]:])
             boxes[i[1]-1] = boxes[i[1]-1][:-1*i[0]]
         
         print("\nfinal")
